@@ -19,7 +19,4 @@ public interface Config extends org.aeonbits.owner.Config {
 
     @Key("remoteUrl")
     String remoteUrl();
-//    @Key("url")
-//    @DefaultValue("1920x1080")
-//    String browserSize();
 }
