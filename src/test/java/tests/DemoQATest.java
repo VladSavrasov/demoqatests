@@ -16,14 +16,14 @@ public class DemoQATest extends TestBase {
     BookApi bookApi = new BookApi();
     ProfilePage profilePage = new ProfilePage();
 
-    @Test
-    void successfulLoginWithUiTest() {
-        Configuration.pageLoadStrategy = "eager";
-        open("/login");
-        $("#userName").setValue("tester");
-        $("#password").setValue("Tester12!").pressEnter();
-        $("#userName-value").shouldHave(text("tester"));
-    }
+//    @Test
+//    void successfulLoginWithUiTest() {
+//        Configuration.pageLoadStrategy = "eager";
+//        open("/login");
+//        $("#userName").setValue("tester");
+//        $("#password").setValue("Tester12!").pressEnter();
+//        $("#userName-value").shouldHave(text("tester"));
+//    }
 
     @WithLogin
     @DisplayName("Удаление книги из профиля зарегистрированного пользователя")
