@@ -35,8 +35,9 @@ public class DemoQATest extends TestBase {
         bookApi.addBook(addBookRequestModel);
         bookApi.deleteBook(deleteBookModel);
 
-        open("/profile");
-        profilePage.checkUserName(TestData.LOGIN).
+
+        profilePage.openSite().
+                checkUserName(TestData.LOGIN).
                 checkBookListHasNoBook(isbn.getTitle()).
                 linkForBookMissing(isbn.getIsbn());
     }
