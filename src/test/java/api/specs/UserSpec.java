@@ -9,7 +9,7 @@ import static helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
-public class userSpec {
+public class UserSpec {
     public static RequestSpecification requestSpec = with()
             .filter(withCustomTemplates())
             .log().uri()

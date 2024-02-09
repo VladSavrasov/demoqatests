@@ -29,8 +29,6 @@ public class TestBase {
     public static String userId;
     public static String token;
 
-//    LoginRequestModel loginRequestModel = new LoginRequestModel(TestData.LOGIN,
-//            TestData.PASSWORD);
     AddBookRequestModel addBookRequestModel = new AddBookRequestModel();
     DeleteBookModel deleteBookModel = new DeleteBookModel();
 
@@ -53,10 +51,11 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
+
     @AfterEach
     void afterAll() {
         Attach.screenShotAs("Last screenshot");
-        if (!Configuration.browser.equalsIgnoreCase("firefox")){
+        if (!Configuration.browser.equalsIgnoreCase("firefox")) {
             Attach.browserConsoleLogs();
         }
         Attach.pageSource();

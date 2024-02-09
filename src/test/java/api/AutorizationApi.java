@@ -3,8 +3,8 @@ package api;
 import api.models.LoginRequestModel;
 import api.models.LoginResponseModel;
 
-import static api.specs.userSpec.requestSpec;
-import static api.specs.userSpec.responseSpec;
+import static api.specs.UserSpec.requestSpec;
+import static api.specs.UserSpec.responseSpec;
 import static io.restassured.RestAssured.given;
 
 public class AutorizationApi {
